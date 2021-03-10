@@ -1,0 +1,17 @@
+{
+  "name": "apollo-refetch-issue-example",
+  "version": "1.0.0",
+  "author": "Denis Manokhin <manokhindenis@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:client": "node ./src/client.js",
+    "start:server": "node ./src/server.js"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "apollo-server": "^2.21.1",
+    "graphql": "^15.5.0",
+    "node-fetch": "^2.6.1",
+    "uuid": "^8.3.2"
+  }
+}
