@@ -26,8 +26,8 @@ const client = new ApolloClient({
 });
 
 const getEntitiesDocument = gql`
-  query GetEntities {
-    entities {
+  query GetEntities($name: string_comparison_exp) {
+    entities(where: { name: $name }) {
       id
       name
     }
@@ -37,6 +37,9 @@ const getEntitiesDocument = gql`
 client
   .watchQuery({
     query: getEntitiesDocument,
+    variables: {
+      name: {_eq: "Name"},
+    },
     fetchPolicy: "network-only",
   })
   .subscribe();

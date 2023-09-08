@@ -6,9 +6,9 @@ const entities = [];
 
 const resolvers = {
   Query: {
-    entities() {
+    entities(_, args) {
       console.log("INFO | QUERY handler called");
-
+      console.log(args);
       return entities;
     },
   },
